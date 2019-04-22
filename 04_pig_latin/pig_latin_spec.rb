@@ -67,6 +67,16 @@ describe "#translate" do
 
   # Test-driving bonus:
   # * write a test asserting that capitalized words are still capitalized (but with a different initial capital letter, of course)
+  it "capitalized words are still capitalized" do
+    s = translate("The quick brown Fox jumps over the lazy Dog")
+    expect(s).to eq("Ethay ickquay ownbray Oxfay umpsjay overay ethay azylay Ogday")
+  end
+
   # * retain the punctuation from the original phrase
+  it "retains the punctuation" do
+    s = translate("If it is Monday, Tuesday, Wednesday, Thursday or Friday, you must go to school!")
+    expect(s).to eq("Ifay itay isay Ondaymay, Uesdaytay, Ednesdayway, Ursdaythay oray Idayfray, ouyay ustmay ogay otay oolschay!")
+  end
+
 
 end
